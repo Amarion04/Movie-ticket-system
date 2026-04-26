@@ -1,1 +1,33 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Seat Selection</title><link rel="stylesheet" href="style.css"></head><body><div class="nav"><div class="brand">Movie Ticket Booking System</div><div><a href="index.html">Home</a><a href="manager.html">Manager Dashboard</a><a href="help.html">Help</a><a href="login.html">Login</a></div></div><main class="container"><h1>Select Seats</h1><p class="lead">Taken seats are disabled. Select one or more available seats.</p><div class="screen">SCREEN</div><div id="seatgrid" class="card"></div><button class="btn" onclick="continueCheckout()">Continue to Checkout</button></main><div class="footer">Prototype for class demonstration</div><script src="app.js"></script></body></html>
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Seat Selection</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="nav"><div class="brand">Movie Ticket Booking System</div><div><a href="index.html">Home</a><a href="manager.html">Manager Dashboard</a><a href="help.html">Help</a><a href="login.html">Login</a></div></div>
+  <main class="container">
+    <h1>Select Seats</h1>
+    <p class="lead">Taken seats are disabled. Select one or more available seats.</p>
+    <div class="screen">SCREEN</div>
+    <div class="legend"><span class="legend-box"></span> Available <span class="legend-box selected-box"></span> Selected <span class="legend-box taken-box"></span> Taken</div>
+    <div id="seatgrid" class="card seatgrid">
+      <div class="seat-row-label">Row A</div>
+      <button class="seat taken" disabled>A1</button><button class="seat taken" disabled>A2</button><button class="seat" onclick="this.classList.toggle('selected')">A3</button><button class="seat" onclick="this.classList.toggle('selected')">A4</button><button class="seat" onclick="this.classList.toggle('selected')">A5</button><button class="seat" onclick="this.classList.toggle('selected')">A6</button>
+      <div class="seat-row-label">Row B</div>
+      <button class="seat" onclick="this.classList.toggle('selected')">B1</button><button class="seat" onclick="this.classList.toggle('selected')">B2</button><button class="seat" onclick="this.classList.toggle('selected')">B3</button><button class="seat" onclick="this.classList.toggle('selected')">B4</button><button class="seat" onclick="this.classList.toggle('selected')">B5</button><button class="seat" onclick="this.classList.toggle('selected')">B6</button>
+      <div class="seat-row-label">Row C</div>
+      <button class="seat" onclick="this.classList.toggle('selected')">C1</button><button class="seat" onclick="this.classList.toggle('selected')">C2</button><button class="seat taken" disabled>C3</button><button class="seat" onclick="this.classList.toggle('selected')">C4</button><button class="seat" onclick="this.classList.toggle('selected')">C5</button><button class="seat" onclick="this.classList.toggle('selected')">C6</button>
+      <div class="seat-row-label">Row D</div>
+      <button class="seat" onclick="this.classList.toggle('selected')">D1</button><button class="seat" onclick="this.classList.toggle('selected')">D2</button><button class="seat" onclick="this.classList.toggle('selected')">D3</button><button class="seat taken" disabled>D4</button><button class="seat" onclick="this.classList.toggle('selected')">D5</button><button class="seat" onclick="this.classList.toggle('selected')">D6</button>
+      <div class="seat-row-label">Row E</div>
+      <button class="seat" onclick="this.classList.toggle('selected')">E1</button><button class="seat" onclick="this.classList.toggle('selected')">E2</button><button class="seat" onclick="this.classList.toggle('selected')">E3</button><button class="seat" onclick="this.classList.toggle('selected')">E4</button><button class="seat taken" disabled>E5</button><button class="seat" onclick="this.classList.toggle('selected')">E6</button>
+    </div>
+    <button class="btn" onclick="continueCheckout()">Continue to Checkout</button>
+  </main>
+  <div class="footer">Prototype for class demonstration</div>
+  <script src="app.js"></script>
+</body>
+</html>
